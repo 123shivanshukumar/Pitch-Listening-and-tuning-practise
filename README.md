@@ -12,3 +12,5 @@ Finally, check how far your adjusted pitch is from the target by clicking on the
 
 # Running
 Just open the html file in any browser. 
+
+Note: This code is entirely written by Claude Opus 5.5
