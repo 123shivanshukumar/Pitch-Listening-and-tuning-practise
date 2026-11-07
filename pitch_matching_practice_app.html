@@ -3540,9 +3540,7 @@ const dir=c===0?'exactly on pitch':(c>0?'sharp (too high)':'flat (too low)');
 $('result').innerHTML='<div class="metric"><p class="k">Target</p><p class="v">'+target.toFixed(2)+' Hz</p><p class="s">'+noteOf(target).name+'</p></div>'+
 '<div class="metric"><p class="k">Your string</p><p class="v">'+f.toFixed(2)+' Hz</p><p class="s">'+fmtNote(f)+'</p></div>'+
 '<div class="metric" style="background:var(--bg-'+v[1]+')"><p class="k" style="color:var(--text-'+v[1]+')">'+v[0]+'</p><p class="v" style="color:var(--text-'+v[1]+')">'+(c>0?'+':c<0?'−':'')+a+'¢</p><p class="s" style="color:var(--text-'+v[1]+')">'+(f-target>=0?'+':'−')+Math.abs(f-target).toFixed(2)+' Hz · '+dir+'</p></div>';
-history.unshift(noteOf(target).name+': '+(c>0?'+':c<0?'−':'')+a+'¢');history=history.slice(0,8);
-const avg=Math.round(history.reduce((s,h)=>s+Math.abs(parseInt(h.split(': ')[1].replace('−','-'))),0)/history.length);
-$('hist').textContent='Recent attempts — '+history.join(' · ')+'  |  Average error: '+avg+'¢'}
+'</div>';}
 $('tSet').onclick=()=>setTarget(parse($('tIn').value));
 $('tIn').addEventListener('keydown',e=>{if(e.key==='Enter')$('tSet').click()});
 $('tIn').addEventListener('input',()=>$('tErr').textContent='');
